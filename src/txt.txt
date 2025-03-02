@@ -1,0 +1,58 @@
+import React from 'react';
+import './Buba.css'; 
+import { useState } from 'react';
+
+const Buba = () => {
+    const[name, setName] = useState();
+    const[counter, setCounter] = useState(0);
+    const [isSignedOut, setIsSignedOut] = useState(0);
+
+    function changename()  {
+        setName('Buba B. Ponon');
+    }
+
+    function increase() {
+        setCounter(counter + 1);
+    }
+
+    function decrease() {
+        setCounter(counter - 1);
+    }
+
+    function handleSignOut() {
+        setIsSignedOut(true);
+    }
+
+    function handleSignIn() {
+        setIsSignedOut(false);
+        setName('');
+        setCounter(0);
+    }
+
+    return (
+        <div className="ben">
+            <h2>Buba Component</h2>
+            {isSignedOut ? (
+                <div>
+                    <h1>Welcome User</h1>
+                    <button className="ben" onClick={handleSignIn}>Sign In</button>
+                </div>
+            ) : (
+                <>
+                    <p>My name is {name}</p>
+                    <button onClick={changename}>Change Name</button>
+                    <div className="counter-container">
+                        <button className="counter-button" onClick={decrease}>-</button>
+                        <span className="counter-number">{counter}</span>
+                        <button className="counter-button" onClick={increase}>+</button>
+                    </div>
+                    <div className="signout-container">
+                        <button className="ben" onClick={handleSignOut}>Sign Out</button>
+                    </div>
+                </>
+            )}
+        </div>
+    );
+};
+
+export default Buba;

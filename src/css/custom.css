@@ -1,0 +1,381 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Form Styling */
+#signin-form input {
+    height: 48px;
+}
+
+.form-control {
+    border-radius: 10px;
+    border: 1px solid #6E7680;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-outline-secondary {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Logo */
+.logo {
+    color: brown;
+}
+
+/* Navbar */
+.hamburger {
+    display: none;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar .menu a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #c82333;
+    bottom: 2px;
+    left: 0;
+}
+
+.no-dropdown-icon {
+    background-image: none;
+    padding-right: 15px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 800px) {
+    #brand {
+        font-size: 17px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-collapse {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+}
+
+/* Language Selection */
+.language-item {
+    text-align: left;
+}
+
+.language-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.language-item select {
+    border: none;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    width: fit-content;
+    appearance: none;
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: left;
+}
+
+.card h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.features-list {
+    list-style-type: none;
+}
+
+.features-list li {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.check-icon {
+    color: green;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .features-section {
+        display: none;
+    }
+
+    .social-buttons .btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .form-container {
+        max-width: 720px;
+        padding: 2rem;
+    }
+
+    .features-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .form-container {
+        max-width: 960px;
+    }
+
+    .features-card {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .form-container {
+        max-width: 1140px;
+    }
+
+    .features-card {
+        padding: 2.5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    #account {
+        display: none;
+    }
+
+    .language-item {
+        margin-top: 1rem;
+    }
+}
+
+/* Fix Font Sizes for Mobile */
+@media (hover: none) {
+    input,
+    select {
+        font-size: 16px !important;
+    }
+}
+
+@media (max-width: 350px) {
+    .features-list {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* About Page */
+.navbar {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd700;
+}
+
+.dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #c92d2d;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: #c92d2d;
+    color: #ffffff;
+}
+
+/* Content Container */
+.content-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #c92d2d;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s;
+}
+
+/* Back Arrow */
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #c92d2d;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-arrow:hover {
+    color: #ffd700;
+}
+
+/* Headers */
+.header-title {
+    color: #c92d2d;
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 15px;
+}
+
+.sub-header {
+    color: #c92d2d;
+    font-size: 2em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #c92d2d;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-radius: 0 0 10px 10px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Already Registered Section */
+.already-registered {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.already-registered a {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.already-registered a:hover {
+    color: #c82333;
+    text-decoration: underline;
+}
